@@ -21,10 +21,6 @@ namespace piyaniza
 
             string name2 = Console.ReadLine();
 
-            for (int i = 0; i < 26; i++)
-            {
-
-            }
             
             Console.WriteLine();
             Console.WriteLine();
@@ -47,127 +43,16 @@ namespace piyaniza
             int count1 = player1.Count;
             int count2 = player2.Count;
 
-            //while (((player1[0] != null) || (player1[0] != "")) || ((player2[0] != null) || (player2[0] != "")))
+            
             int f = 1;
             int h = 0;
             while (f!=0)
             {
-                
-                int pl1 =0;
-                int pl2= 0;
-                if (player1[0] == "2 крести" || player1[0] == "2 буби" || player1[0] == "2 пики" || player1[0] == "2 черви") 
-                {
-                     pl1 = 1;
-                }
-
-                if (player1[0] == "3 крести" || player1[0] == "3 буби" || player1[0] == "3 пики" || player1[0] == "3 черви")
-                {
-                     pl1 = 2;
-                }
-
-                if (player1[0] == "4 крести" || player1[0] == "4 буби" || player1[0] == "4 пики" || player1[0] == "4 черви")
-                {
-                     pl1 = 3;
-                }
-
-                if (player1[0] == "5 крести" || player1[0] == "5 буби" || player1[0] == "5 пики" || player1[0] == "5 черви")
-                {
-                    pl1 = 4;
-                }
-
-                if (player1[0] == "6 крести" || player1[0] == "6 буби" || player1[0] == "6 пики" || player1[0] == "6 черви")
-                {
-                    pl1 = 5;
-                }
-                if (player1[0] == "7 крести" || player1[0] == "7 буби" || player1[0] == "7 пики" || player1[0] == "7 черви")
-                {
-                    pl1 = 6;
-                }
-                if (player1[0] == "8 крести" || player1[0] == "8 буби" || player1[0] == "8 пики" || player1[0] == "8 черви")
-                {
-                    pl1 = 7;
-                }
-                if (player1[0] == "9 крести" || player1[0] == "9 буби" || player1[0] == "9 пики" || player1[0] == "9 черви")
-                {
-                    pl1 = 8;
-                }
-                if (player1[0] == "10 крести" || player1[0] == "10 буби" || player1[0] == "10 пики" || player1[0] == "10 черви")
-                {
-                    pl1 = 9;
-                }
-                if (player1[0] == "валет крести" || player1[0] == "валет буби" || player1[0] == "валет пики" || player1[0] == "валет черви")
-                {
-                    pl1 = 10;
-                }
-                if (player1[0] == "дама крести" || player1[0] == "дама буби" || player1[0] == "дама пики" || player1[0] == "дама черви")
-                {
-                    pl1 = 11;
-                }
-                if (player1[0] == "король крести" || player1[0] == "король буби" || player1[0] == "король пики" || player1[0] == "король черви")
-                {
-                    pl1 = 12;
-                }
-                if (player1[0] == "туз крести" || player1[0] == "туз буби" || player1[0] == "туз пики" || player1[0] == "туз черви")
-                {
-                    pl1 = 13;
-                }
+                (int pl1, int pl2) = TheValueOfTheCard( player1, player2);
 
 
 
-                if (player2[0] == "2 крести" || player2[0] == "2 буби" || player2[0] == "2 пики" || player2[0] == "2 черви")
-                {
-                    pl2 = 1;
-                }
-                if (player2[0] == "3 крести" || player2[0] == "3 буби" || player2[0] == "3 пики" || player2[0] == "3 черви")
-                {
-                    pl2 = 2;
-                }
-                if (player2[0] == "4 крести" || player2[0] == "4 буби" || player2[0] == "4 пики" || player2[0] == "4 черви")
-                {
-                    pl2 = 3;
-                }
-                if (player2[0] == "5 крести" || player2[0] == "5 буби" || player2[0] == "5 пики" || player2[0] == "5 черви")
-                {
-                    pl2 = 4;
-                }
-                if (player2[0] == "6 крести" || player2[0] == "6 буби" || player2[0] == "6 пики" || player2[0] == "6 черви")
-                {
-                    pl2 = 5;
-                }
-                if (player2[0] == "7 крести" || player2[0] == "7 буби" || player2[0] == "7 пики" || player2[0] == "7 черви")
-                {
-                    pl2 = 6;
-                }
-                if (player2[0] == "8 крести" || player2[0] == "8 буби" || player2[0] == "8 пики" || player2[0] == "8 черви")
-                {
-                    pl2 = 7;
-                }
-                if (player2[0] == "9 крести" || player2[0] == "9 буби" || player2[0] == "9 пики" || player2[0] == "9 черви")
-                {
-                    pl2 = 8;
-                }
-                if (player2[0] == "10 крести" || player2[0] == "10 буби" || player2[0] == "10 пики" || player2[0] == "10 черви")
-                {
-                    pl2 = 9;
-                }
-                if (player2[0] == "валет крести" || player2[0] == "валет буби" || player2[0] == "валет пики" || player2[0] == "валет черви")
-                {
-                    pl2 = 10;
-                }
-                if (player2[0] == "дама крести" || player2[0] == "дама буби" || player2[0] == "дама пики" || player2[0] == "дама черви")
-                {
-                    pl2 = 11;
-                }
-                if (player2[0] == "король крести" || player2[0] == "король буби" || player2[0] == "король пики" || player2[0] == "король черви")
-                {
-                    pl2 = 12;
-                }
-                if (player2[0] == "туз крести" || player2[0] == "туз буби" || player2[0] == "туз пики" || player2[0] == "туз черви")
-                {
-                    pl2 = 13;
-                }
-
-                if (pl1 == 1 || pl2 == 13)
+                if (pl1 == 2 || pl2 == 14)
                 {
                     string perecid1 = player1[0];
                     string perecid2 = player2[0];
@@ -179,17 +64,17 @@ namespace piyaniza
                     player1.Add(perecid2);
                     s1 = s1 + 1;
                 }
-                if (pl2 == 1 || pl1 == 13)
+                if (pl2 == 2 || pl1 == 14)
                 {
                     string perecid1 = player1[0];
                     string perecid2 = player2[0];
                     Console.WriteLine($"{name1} кладёт {perecid1},а {name2} кладёт {perecid2}");
-                    Console.WriteLine($"забирает: {name1}");
+                    Console.WriteLine($"забирает: {name2}");
                     player1.RemoveAt(0);
                     player2.RemoveAt(0);
                     player1.Add(perecid1);
                     player1.Add(perecid2);
-                    s1 = s1 + 1;
+                    s2 = s2 + 1;
                 }
 
                 if (pl1>pl2)
@@ -331,6 +216,39 @@ namespace piyaniza
                 cards.RemoveAt(0);
             }
             return (cardsplayer1, cardsplayer2);
+        }
+        static (int play1, int play2) TheValueOfTheCard(List<string> player1, List<string> player2)
+        {
+            int play1 = 0;
+            int play2 = 0;
+            string nulindx1 = player1[0];
+            string nulindx2 = player2[0];
+            while (play1 >0 && play2 > 0)
+            {
+                List<string> ch1 = new List<string> {null,null, "2", "3", "4", "5", "6", "7", "8", "9", "10", "в", "д", "к", "т" };
+                for (int i = 2; i < 15; i++)
+                {
+                    int indexplyer1 = nulindx1.IndexOf(ch1[i]);
+                    int indexplyer2 = nulindx2.IndexOf(ch1[i]);
+                    if (indexplyer1 == 1)
+                    {
+                        play1 = i;
+                    }
+                    if (indexplyer2 == 1)
+                    {
+                        play2 = i;
+                    }
+                }
+            }
+            return (play1, play2);
+        }
+        static(int su1, int su2, string per1, string per2) WinPlayer(List<string> player1, List<string> player2,int pl1, int pl2)
+        {
+            string per1="";
+            string per2 = "";
+            int s1 = 0;
+            int s2 = 0;
+            return (s1, s2,per1,per2);
         }
     } 
 }
